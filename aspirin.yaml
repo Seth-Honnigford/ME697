@@ -20,10 +20,6 @@ data:
     val: 0.1
     test: 0.1
   transforms:
-    - _target_: nequip.data.transforms.ConcatenatedXYZEnergy
-      energy_key: total_energy
-    - _target_: nequip.data.transforms.ConcatenatedXYZForces
-      forces_key: forces
     - _target_: nequip.data.transforms.NeighborListTransform
       r_max: ${cutoff_radius}
     - _target_: nequip.data.transforms.ChemicalSpeciesToAtomTypeMapper
